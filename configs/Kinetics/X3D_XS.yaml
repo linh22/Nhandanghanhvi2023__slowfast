@@ -1,5 +1,5 @@
 TRAIN:
-  ENABLE: Tue
+  ENABLE: True
   DATASET: kinetics
   BATCH_SIZE: 128
   EVAL_PERIOD: 10
