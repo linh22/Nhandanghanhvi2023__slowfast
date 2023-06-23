@@ -269,11 +269,11 @@ def torchvision_decode(
         decode_all_video (bool): if True, the entire video was decoded.
     """
     # Convert the bytes to a tensor.
-    video_tensor = torch.from_numpy(np.frombuffer(np.array(video_handle), dtype=np.uint8))
+    video_tensor = torch.from_numpy(np.array(video_handle, dtype=np.uint8))
 
     decode_all_video = True
     video_start_pts, video_end_pts = 0, -1
-    # The video_meta is empty, fetch the meta data from the raw video.
+    # The video_meta is empty, fetch the metadata from the raw video.
     if len(video_meta) == 0:
         # Tracking the meta info for selective decoding in the future.
         meta = io._probe_video_from_memory(video_tensor)
