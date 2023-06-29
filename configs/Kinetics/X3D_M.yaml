@@ -59,3 +59,14 @@ DATA_LOADER:
 NUM_GPUS: 1
 RNG_SEED: 0
 OUTPUT_DIR: "/content/drive/MyDrive/Colab Notebooks"
+TENSORBOARD:
+  ENABLE: True
+  LOG_DIR: "/content/drive/MyDrive/Colab Notebooks"
+  CLASS_NAMES_PATH: class_name.json
+  CONFUSION_MATRIX:
+    ENABLE: True
+    SUBSET_PATH: class_name.json
+  HISTOGRAM:
+    ENABLE: True
+#    TOP_K: 10   # Top-k most frequently predicted classes for each class in the dataset.
+    SUBSET_PATH: class_name.json
