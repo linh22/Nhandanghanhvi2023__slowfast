@@ -1,5 +1,5 @@
 TRAIN:
-  # ENABLE: False # default True
+  ENABLE: True # default True
   DATASET: kinetics
   BATCH_SIZE: 15
   EVAL_PERIOD: 10
@@ -58,6 +58,11 @@ DATA_LOADER:
   PIN_MEMORY: True
 NUM_GPUS: 1
 RNG_SEED: 0
+DEMO:
+  ENABLE: False
+  LABEL_FILE_PATH: class_name.json
+  INPUT_VIDEO: data/Dashboard_User_id_24026_NoAudio_3_0004100059_.mp4
+  OUTPUT_FILE: demo.mp4
 OUTPUT_DIR: "/content/drive/MyDrive/Colab Notebooks"
 TENSORBOARD:
   ENABLE: True
