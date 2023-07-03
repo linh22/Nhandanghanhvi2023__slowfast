@@ -102,6 +102,10 @@ class Predictor:
             preds = torch.tensor([])
         else:
             preds = self.model(inputs, bboxes)
+            if self.cfg.DETECTION.EXPORT:
+                torch.onnx.export(self.model, (inputs, bboxes), self.cfg.DETECTION.EXPORT_NAME)
+                print(f"Exported. Saved in {self.cfg.DETECTION.EXPORT_name}")
+                exit()
 
         if self.cfg.NUM_GPUS:
             preds = preds.cpu()

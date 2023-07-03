@@ -956,6 +956,11 @@ _C.DETECTION.SPATIAL_SCALE_FACTOR = 16
 # RoI tranformation resolution.
 _C.DETECTION.ROI_XFORM_RESOLUTION = 7
 
+# Export model
+_C.DETECTION.EXPORT = False
+# Export dir
+_C.DETECTION.EXPORT_NAME = "checkpoint.onnx"
+
 
 # -----------------------------------------------------------------------------
 # AVA Dataset options
